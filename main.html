@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raizian Auth System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+    
+    <div id="loading-spinner" class="flex items-center justify-center min-h-screen w-full">
+        <svg class="w-12 h-12 text-[#00CFFF] animate-spin"><use href="#icon-loader"></use></svg>
+    </div>
+
+    <div id="login-page">
+
+        <div class="text-center">
+            <h2>Raizian Portal</h2>
+            <p>Sign in to access your skills dashboard.</p>
+        </div>
+        <div id="login-message">bb</div>
+        <div>
+            <button id="google-signin-btn">
+                Sign in with Google
+            </button>
+        </div>
+    </div>
+
+    <div id="dashboard-page" class="hidden flex-col items-center justify-center w-full max-w-4xl p-8 text-white">
+        <div id="dashboard-welcome" class="text-center transition-all duration-1000 ease-out opacity-0 -translate-y-10">
+            <h1 class="text-5xl font-extrabold text-[#00CFFF]">
+                Welcome back, <span id="user-display-name">Creator</span>
+            </h1>
+            <p class="mt-4 text-2xl text-gray-300">
+                Your skill portal awaits.
+            </p> 
+        </div>
+
+        <div id="dashboard-content" class="w-full p-8 mt-12 bg-gray-900 bg-opacity-70 backdrop-blur-sm rounded-2xl shadow-2xl shadow-[#00CFFF]/30 border border-gray-800 transition-all duration-1000 ease-out delay-300 opacity-0">
+            <h3 class="text-2xl font-bold text-white">Dashboard</h3>
+            <p class="mt-2 text-gray-400">This is your protected dashboard. Only authenticated users can see this.</p>
+            
+            <div class="mt-8 flex flex-wrap gap-4">
+                <button class="flex items-center justify-center px-5 py-3 font-bold text-white bg-[#00CFFF] rounded-lg transition-all duration-300 ease-in-out
+                               hover:bg-cyan-600 hover:shadow-lg hover:shadow-[#00CFFF]/50
+                               focus:outline-none focus:ring-2 focus:ring-[#00CFFF] focus:ring-offset-2 focus:ring-offset-gray-900">
+                    <svg class="w-5 h-5 mr-2"><use href="#icon-home"></use></svg>
+                    Learning Hub
+                </button>
+                <button id="signout-btn" class="flex items-center justify-center px-5 py-3 font-medium text-white bg-gray-700 rounded-lg transition-all duration-300 ease-in-out
+                               hover:bg-gray-600 hover:border-[#00CFFF] hover:border
+                               focus:outline-none focus:ring-2 focus:ring-[#00CFFF] focus:ring-offset-2 focus:ring-offset-gray-900">
+                    <svg class="w-5 h-5 mr-2"><use href="#icon-logout"></use></svg>
+                    Sign Out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script/main.js" type="module"></script>
+</body>
+</html>
