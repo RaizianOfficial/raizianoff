@@ -1,0 +1,14 @@
+  .toggle-checkbox:checked + .toggle-bg {
+            background-color: #00CFFF;
+        }
+        .toggle-checkbox:checked + .toggle-bg .toggle-dot {
+            transform: translateX(1.5rem);
+            box-shadow: 0 0 8px 2px #00CFFF;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
